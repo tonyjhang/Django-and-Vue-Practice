@@ -21,5 +21,5 @@ python manage.py migrate
 
 ## Run Demo
 ```sh
-python manage.py runserver
+gunicorn stock_rest_api.wsgi
 ```

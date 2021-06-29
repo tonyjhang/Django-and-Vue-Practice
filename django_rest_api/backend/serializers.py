@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate
 
 from .models import TraceList, TradeDetail
 
-class CreateTraceListSerializer(serializers.ModelSerializer):
+class TraceListSerializer(serializers.ModelSerializer):
     class Meta:
         model = TraceList
         fields = ['stock_num', 'stock_name']
@@ -20,7 +20,7 @@ class CreateTraceListSerializer(serializers.ModelSerializer):
         )
         return stock
 
-class CreateStockTradeDetailSerializer(serializers.ModelSerializer):
+class StockTradeDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = TradeDetail
         fields = [
