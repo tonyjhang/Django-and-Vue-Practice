@@ -24,13 +24,13 @@ class StockTradeDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = TradeDetail
         fields = [
-            'stock_num', 'brokerage_name', 'date', 'total', \
-            'buy_avg', 'buy_quantity', 'sell_avg', 'sell_quantity'
+            'brokerage_name', 'total', 'buy_avg',
+            'buy_quantity', 'sell_avg', 'sell_quantity'
         ]
 
     def get_detail_by_date(**kwargs):
-        stock_ract_list = TradeDetail.objects.filter(**kwargs)
-        return stock_ract_list
+        detail = TradeDetail.objects.filter(**kwargs).order_by('-total')
+        return detail
 
 class CreateUserSerializer(serializers.ModelSerializer):
     class Meta:

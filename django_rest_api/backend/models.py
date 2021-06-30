@@ -5,7 +5,7 @@ class TradeDetail(models.Model):
     class Meta:
         db_table = 'TradeDetail'
         
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     stock_num = models.CharField(max_length=20)
     brokerage_name = models.CharField(max_length=20)
     date = models.DateTimeField()

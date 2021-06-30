@@ -1,4 +1,4 @@
-# Django Integrate Vue Practice
+# Django and Vue Practice
 This repo is a practice for django and vue.
 Backend use django, django rest framework and django rest knox as authentication.
 Fronted use vue, vuex as state manager, quasar as ui framework.
